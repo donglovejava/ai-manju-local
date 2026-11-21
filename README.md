@@ -210,7 +210,7 @@ python pipeline/driver.py --config config.yaml
 
 ## License
 
-（待定）
+[MIT](LICENSE) © 2026 donglovejava
 
 ---
 
