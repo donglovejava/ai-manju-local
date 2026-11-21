@@ -1,0 +1,14 @@
+name: 苏锦
+en_name: Su Jin
+gender: female
+age: 22
+age_lock: young adult woman in her early twenties, 22 years old, university student, mature adult facial structure, refined adult features, calm eyes, no teenager look, no baby face, no schoolgirl appearance
+hair: shoulder-length straight black hair, often tucked behind one ear
+face: East Asian, clear pale skin, calm gentle eyes, faint restrained smile, neat eyebrows
+build: slim adult build, 163cm
+default_outfit: light beige knit sweater, dark mid-length skirt, white canvas shoes
+outfits:
+  highschool: navy school uniform jacket, white shirt, red ribbon at collar
+  university: light beige knit sweater, dark skirt
+  winter: cream wool coat, dark scarf
+notes: 女主。字写得好看，成绩好，气质清冷但不疏远。主时间线 22 岁成年女性，禁止画成少女。

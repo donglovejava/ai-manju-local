@@ -1,0 +1,19 @@
+# 核心依赖
+requests>=2.31.0
+PyYAML>=6.0
+numpy>=1.24
+Pillow>=10.0
+
+# 本地 TTS（ONNX，不需要 torch）
+piper-tts[zh]>=1.8.0
+unicode_rbnf>=0.1.0
+
+# 可选：在线 TTS 备选
+edge-tts>=6.1.0
+
+# 测试
+pytest>=7.4.0
+
+# ---- 可选：以下引擎体积大或需要 torch，按需安装 ----
+# torchaudio>=2.0          # ChatTTS 依赖
+# ChatTTS>=0.2.0           # 备选中文 TTS，音质更好但需 torch

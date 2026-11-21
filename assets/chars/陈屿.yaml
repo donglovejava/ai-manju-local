@@ -1,0 +1,14 @@
+name: 陈屿
+en_name: Chen Yu
+gender: male
+age: 30
+age_lock: mature adult man, 30 years old, adult facial structure, defined jawline, subtle nasolabial lines, slightly tired eyes, no baby face
+hair: short black hair, slightly grown out at the sides, a few strands falling over forehead
+face: East Asian, calm restrained expression, thin eyebrows, dark brown eyes, clean shaven, slightly tired look
+build: slim, 178cm, narrow shoulders, upright posture
+default_outfit: dark charcoal wool overcoat over a black crewneck sweater, dark grey trousers, black leather shoes
+outfits:
+  highschool: oversized hand-knitted grey turtleneck sweater with sleeves a bit too long, dark navy school trousers
+  classmate_dinner: dark charcoal wool overcoat over a black crewneck sweater
+  home: plain grey long-sleeve shirt, loose dark trousers
+notes: 主角。第一人称「我」。情绪靠眼神和细微动作表达，不用夸张表情。高中时期穿母亲织的灰色高领毛衣，袖子长两寸。年龄感必须锁死为 30 岁成年男性，禁止画成少年。

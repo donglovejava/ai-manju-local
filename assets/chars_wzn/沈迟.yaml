@@ -1,0 +1,15 @@
+name: 沈迟
+en_name: Shen Chi
+gender: male
+age: 22
+age_lock: young adult man in his early twenties, 22 years old, university senior, mature adult facial structure, defined jawline, slightly tired adult eyes, no teenager look, no baby face, no schoolboy appearance
+hair: short black hair, neatly cut above the ears, forehead fully visible, short bangs kept away from eyes, no long hair
+face: East Asian, introverted and calm, dark brown eyes, clean shaven, thoughtful expression
+build: slim adult build, 178cm, slightly stooped shoulders from years of study
+default_outfit: dark navy wool coat over a grey knit sweater, dark trousers, black canvas shoes
+outfits:
+  highschool: navy school uniform jacket over white shirt, dark school trousers
+  university: dark navy wool coat over grey knit sweater
+  dorm: grey hoodie, loose dark trousers
+  winter: dark navy wool coat, thick grey scarf
+notes: 男主，第一人称「我」。工科生，话少，情绪全在心里。主时间线 22 岁成年男性，禁止画成少年；高中回忆段落才允许 16 岁，但默认用 22 岁。

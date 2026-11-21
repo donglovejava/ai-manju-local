@@ -1,0 +1,14 @@
+name: 林晚
+en_name: Lin Wan
+gender: female
+age: 30
+age_lock: mature adult woman, 30 years old, adult facial structure, mature graceful features, no baby face, no schoolgirl look
+hair: short black bob hair, chin length, slightly wet strands at the ends
+face: East Asian, clear pale skin, calm and quiet eyes, soft features, subtle restrained smile
+build: slim, 165cm, delicate frame
+default_outfit: grey knit sweater with slightly worn white cuffs, dark straight trousers
+outfits:
+  highschool: red knit sweater under navy school uniform jacket, white canvas sneakers with scuffed toes
+  classmate_dinner: grey knit sweater with worn cuffs
+  winter: dark wool coat, thick scarf, breathe vapor
+notes: 女主。头发比高中时短。同学会穿袖口磨白的灰毛衣。气质清冷克制，台词少，靠眼神和手的动作演。年龄感必须锁死为 30 岁成年女性。

@@ -1,0 +1,96 @@
+# 小说 → 漫剧 全局配置
+# 所有相对路径基于项目根目录 C:\project\manju
+
+paths:
+  project_root: .                   # 项目根目录（相对或绝对均可）
+  comfyui: ComfyUI                  # ComfyUI 目录，改成你的路径
+  comfyui_python: ComfyUI/python_embeded/python.exe
+  work: work                        # 中间产物
+  output: output                    # 成片输出
+  assets: assets                    # 角色卡 / BGM / LoRA 素材
+  ffmpeg: ffmpeg                    # 在 PATH 里就写 ffmpeg，否则写绝对路径
+  ffprobe: ffprobe
+novel:
+  path: novels/your_novel.md
+  title: 暗恋那三年，她也在等
+  # 原文风格标记：括号分场（）、视角标记【她】
+  scene_markers: ["（", "）", "【", "】"]
+
+video:
+  width: 1080
+  height: 1920
+  fps: 30
+  # 单镜头时长区间（秒）——竖屏漫剧节奏
+  shot_min_sec: 2.5
+  shot_max_sec: 4.0
+  # 语速：中文配音约 4.6 字/秒，用于由台词长度反推镜头时长
+  chars_per_sec: 4.6
+  subtitle:
+    font: "Source Han Sans SC Bold"
+    size: 52
+    outline: 3
+    margin_bottom: 180
+
+image:
+  # SDXL 原生像素预算约 1M，9:16 对应 768×1344；不要用 1024×1536（会崩手崩脸）
+  base_width: 768
+  base_height: 1344
+  steps: 28
+  cfg: 5.5
+  sampler: dpmpp_2m
+  scheduler: karras
+  # 出图后再 RealESRGAN 2x → 1536×2688，供 1080×1920 裁切
+  upscale_to: [1536, 2688]
+  # 8GB 显存下的批次：一次 1 张最稳，串行
+  batch_size: 1
+  clip_skip: 2
+
+style:
+  preset: korean_manhwa_clean
+  # "safe" 是 danbooru 分级标签，Illustrious 系底模对此敏感，必须放在最前
+  positive_prefix: >-
+    safe, general audience, korean webtoon style, flat clean colors, minimal shading,
+    thin precise lineart, full color, colored, modern urban aesthetic,
+    limited palette of cool grey and warm accent,
+    cinematic composition, fully clothed, mature adult characters, realistic adult facial proportions,
+    high quality, masterpiece, best art
+  negative: >-
+    lowres, bad anatomy, bad hands, extra fingers, missing fingers,
+    fused fingers, worst quality, low quality, jpeg artifacts, watermark,
+    signature, text, logo, blurry, deformed, disfigured, extra limbs,
+    multiple views, collage, comic panel, speech bubble, border, frame,
+    chibi, 3d render, photorealistic, child, teen, shota, loli, young boy,
+    baby face, schoolgirl, overly large eyes, oversized head, sweat drop,
+    nsfw, nude, naked, topless, bottomless, nipples, areola, genitals,
+    pubic hair, cleavage, sexual, suggestive, fetish, underwear, lingerie,
+    character sheet, reference sheet, multiple characters, duplicate body,
+    cropped limbs, disembodied, 2girls, 2boys, multiple girls, multiple boys,
+    duo, twins, clone, mirror image, monochrome, greyscale, black and white,
+    uncolored, sketch, lineart only, huge breasts, large breasts,
+    gigantic breasts, exaggerated chest, exaggerated proportions,
+    close-up in foreground, person in background, depth layered figures
+
+llm:
+  provider: deepseek
+  base_url: https://api.deepseek.com/v1
+  model: deepseek-chat
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.7
+  max_tokens: 8000
+  # 一次喂多少字原文做分镜（太大模型会漏镜头）
+  chunk_chars: 600
+
+tts:
+  engine: indextts2
+  # 默认旁白音色（后需实测换成合适的参考音频）
+  ref_audio: assets/voice/narrator.wav
+  speed: 1.0
+  # 每句台词单独出 wav，便于按时间轴对齐
+  per_line: true
+
+render:
+  # 运镜：推/拉/摇/移，随机但有约束
+  camera_moves: [zoom_in, zoom_out, pan_left, pan_right, tilt_up, tilt_down]
+  # 转场：硬切为主，情绪点用黑场/白闪
+  default_transition: cut
+  transition_sec: 0.3

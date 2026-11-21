@@ -1,0 +1,39 @@
+# ---------- 密钥 ----------
+.env
+*.key
+DeepSeek-Key.txt
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# ---------- 生产中间产物（体积巨大，不入库）----------
+work/
+work_wzn/
+output/
+output_wzn/
+logs/
+_scratch/
+
+# ---------- 生成素材 ----------
+assets/lora/
+assets/chars/refs/
+assets/bgm/
+*.mp4
+*.webm
+*.wav
+*.ass
+*.srt
+
+# ---------- 第三方数据（按需自行下载）----------
+g2pW/
+g2pW.tar.gz
+
+# ---------- 编辑器 / 系统 ----------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
